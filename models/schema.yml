@@ -1,0 +1,12 @@
+
+version: 2
+
+models:
+  - name: stg_users
+    description: "This model cleans and standards the raw user data from the e-commerce store."
+    columns:
+      - name: user_id
+        description: "The primary key for this model. Each ID represents a unique customer."
+        tests:
+          - unique
+          - not_null

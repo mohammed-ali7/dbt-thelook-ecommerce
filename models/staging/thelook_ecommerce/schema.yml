@@ -18,3 +18,12 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: stg_order_items
+    description: "Line-item details for each order, containing individual product prices."
+    columns:
+      - name: order_item_id
+        description: "The primary key for the order items model."
+        tests:
+          - unique
+          - not_null

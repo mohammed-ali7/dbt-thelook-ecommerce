@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: "Customer dimension table containing descriptive attributes and aggregated order history."
+    columns:
+      - name: user_id
+        description: "The unique primary key for each user."
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_orders
+    description: "Core facts table tracking metrics for individual customer transactions and revenue."
+    columns:
+      - name: order_id
+        description: "The unique primary key for each order."
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "Foreign key referencing the customer who placed the order."
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_users')
+                field: user_id

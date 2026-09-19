@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: "This model cleans and standardizes the raw user data."
+    columns:
+      - name: user_id
+        description: "The primary key for this model."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_orders
+    description: "This model cleans and standardizes the raw sales and orders data."
+    columns:
+      - name: order_id
+        description: "The primary key for this model."
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_order_items
+    description: "Line-item details for each order, containing individual product prices."
+    columns:
+      - name: order_item_id
+        description: "The primary key for the order items model."
+        tests:
+          - unique
+          - not_null

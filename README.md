@@ -4,6 +4,8 @@
 <!-- Drop your Looker Studio dashboard screenshot right below this line -->
 ![E-commerce Dashboard Presentation](dashboard.png)
 
+🔗 **[Click here to view the Live Interactive Dashboard](https://datastudio.google.com/s/mL7joqEJkrM)
+
 ## 🔄 Data Lineage Graph (DAG)
 <!-- Drop your dbt Lineage graph screenshot right below this line -->
 ![dbt Transformations Lineage](lineage.png)
